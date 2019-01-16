@@ -14,5 +14,8 @@ zuul:
   routes:
      myUser.serviceId: aigou-plat
      myUser.path: /plat/**  #以/user/开头的所有路径都转发给user-provider
+     common.serviceId: aigou-common #这是调用满足条件的服务名，注意要小写
+     common.path: /common/** #这是所有路径前的通配
+     product.serviceId: aigou-product #这是调用满足条
   ignored-services:  "*" #可以一个一个配置,但是很麻烦,用*来通配
   prefix: "/services" #加上统一前缀
